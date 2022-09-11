@@ -1,0 +1,25 @@
+$ terraform console
+
+> var.private_subnet_cidr_blocks
+tolist([
+  "10.0.101.0/24",
+  "10.0.102.0/24",
+  "10.0.103.0/24",
+  "10.0.104.0/24",
+  "10.0.105.0/24",
+  "10.0.106.0/24",
+  "10.0.107.0/24",
+  "10.0.108.0/24",
+])
+
+> var.private_subnet_cidr_blocks[1]
+"10.0.102.0/24"
+
+> slice(var.private_subnet_cidr_blocks, 0, 3)
+tolist([
+  "10.0.101.0/24",
+  "10.0.102.0/24",
+  "10.0.103.0/24",
+])
+
+> exit
